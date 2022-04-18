@@ -13,6 +13,12 @@ NAME         top
        xargs - build and execute command lines from standard input
 SYNOPSIS         top
        xargs [options] [command [initial-arguments]]
+    
+        change up
+        a few 
+        lines 
+        right here
+
 DESCRIPTION         top
        This manual page documents the GNU version of xargs.  xargs reads
        items from the standard input, delimited by blanks (which can be
@@ -258,6 +264,10 @@ STANDARDS CONFORMANCE         top
        The -o option is an extension to the POSIX standard for better
        compatibility with BSD.
 
+       add a few lines here like
+       I know what I'm talking about
+       we are just creating multi line diffs
+
        The POSIX standard allows implementations to have a limit on the
        size of arguments to the exec functions.  This limit could be as
        low as 4096 bytes including the size of the environment.  For
@@ -341,6 +351,10 @@ COLOPHON         top
 Pages that refer to this page: dpkg-name(1),  find(1),  grep(1),  locate(1),  updatedb(1),  lsof(8)
 
 HTML rendering created 2021-08-27 by Michael Kerrisk, author of The Linux Programming Interface, maintainer of the Linux man-pages project.
+
+add a few lines right here as well
+yup, yup
+another line
 
 For details of in-depth Linux/UNIX system programming training courses that I teach, look here.
 
