@@ -28,10 +28,20 @@ This README contains real GitHub links to test in-app navigation for all support
 
 ## Commit Links
 
-- [neovim/neovim@b17d966](https://github.com/neovim/neovim/commit/b17d966) - Short SHA (the original test case!)
-- [neovim/neovim@b17d9666ec2e8267c3dc2a9a8bd90e2cd90b1ada](https://github.com/neovim/neovim/commit/b17d9666ec2e8267c3dc2a9a8bd90e2cd90b1ada) - Full SHA
-- [facebook/react@06092a0](https://github.com/facebook/react/commit/06092a0) - React commit
-- [golang/go@2580d0e](https://github.com/golang/go/commit/2580d0e) - Go commit
+### Short SHA (7 chars)
+- [neovim@0c27c11](https://github.com/neovim/neovim/commit/0c27c11) - Neovim short SHA
+- [react@454fc41](https://github.com/facebook/react/commit/454fc41) - React short SHA
+- [go@ad91f5d](https://github.com/golang/go/commit/ad91f5d) - Go short SHA
+
+### Full SHA (40 chars)
+- [neovim@0c27c1175b0ab168778fe0dfdff441885486dda3](https://github.com/neovim/neovim/commit/0c27c1175b0ab168778fe0dfdff441885486dda3) - Neovim full SHA
+- [react@454fc41fc7d50f8abbcfb9595b01e8ea8bfcc265](https://github.com/facebook/react/commit/454fc41fc7d50f8abbcfb9595b01e8ea8bfcc265) - React full SHA
+- [go@ad91f5d241f3b8e85dc866d0087c3f13af96ef33](https://github.com/golang/go/commit/ad91f5d241f3b8e85dc866d0087c3f13af96ef33) - Go full SHA
+
+### Medium SHA (20 chars)
+- [neovim@0c27c1175b0ab1687](https://github.com/neovim/neovim/commit/0c27c1175b0ab1687) - Neovim medium SHA
+- [react@454fc41fc7d50f8ab](https://github.com/facebook/react/commit/454fc41fc7d50f8ab) - React medium SHA
+- [go@ad91f5d241f3b8e85](https://github.com/golang/go/commit/ad91f5d241f3b8e85) - Go medium SHA
 
 ## File Links
 
