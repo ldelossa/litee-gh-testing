@@ -43,6 +43,21 @@ This README contains real GitHub links to test in-app navigation for all support
 - [react@ba5b843692519a226347](https://github.com/facebook/react/commit/ba5b843692519a226347) - React medium SHA
 - [go@516699848b7c19b2b7f8](https://github.com/golang/go/commit/516699848b7c19b2b7f8) - Go medium SHA
 
+## Compare Links
+
+### Branch to Branch
+- [main...branch-1](https://github.com/ldelossa/litee-gh-testing/compare/main...branch-1) - Compare main to branch-1 (same repo)
+- [main...branch-2](https://github.com/ldelossa/litee-gh-testing/compare/main...branch-2) - Compare main to branch-2 (same repo)
+- [branch-1...branch-2](https://github.com/ldelossa/litee-gh-testing/compare/branch-1...branch-2) - Compare two feature branches
+
+### Tag to Tag (external repos)
+- [go1.22.0...go1.23.0](https://github.com/golang/go/compare/go1.22.0...go1.23.0) - Go version comparison
+- [v0.9.5...v0.10.0](https://github.com/neovim/neovim/compare/v0.9.5...v0.10.0) - Neovim version comparison
+- [v18.2.0...v18.3.1](https://github.com/facebook/react/compare/v18.2.0...v18.3.1) - React version comparison
+
+### Cross-repo compare links
+- [cilium compare](https://github.com/cilium/cilium/compare/v1.15.0...v1.16.0) - Cilium version comparison
+
 ## File Links
 
 - [neovim/neovim - init.lua](https://github.com/neovim/neovim/blob/master/src/nvim/lua/vim.lua) - Neovim Lua file
@@ -88,4 +103,3 @@ These link types don't have corresponding views in OctoPunk and should open in b
 - [neovim wiki](https://github.com/neovim/neovim/wiki) - Wiki (no view)
 - [react discussions](https://github.com/facebook/react/discussions) - Discussions (no view)
 - [cilium blame](https://github.com/cilium/cilium/blame/main/README.rst) - Blame (no view)
-- [go compare](https://github.com/golang/go/compare/go1.22.0...go1.23.0) - Compare (no view yet)
