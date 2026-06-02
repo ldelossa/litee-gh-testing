@@ -1,0 +1,42 @@
+name: env-inheritance-proof
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/**'
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - name: 'enterprise-vrf-1'
+            enterprise-vrf: 'true'
+          - name: 'plain-1'
+            enterprise-vrf: 'false'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Derive config
+        id: cfg
+        env: { ENTERPRISE_VRF: '${{ matrix.enterprise-vrf }}' }
+        uses: ./.github/actions/cilium-config
+
+      - name: Assert
+        shell: bash
+        run: |
+          echo "matrix.enterprise-vrf = ${{ matrix.enterprise-vrf }}"
+          echo "returned config       = ${{ steps.cfg.outputs.config }}"
+          if [ "${{ matrix.enterprise-vrf }}" == "true" ]; then
+            if [[ "${{ steps.cfg.outputs.config }}" == *"enterprise.vrf.enabled=true"* ]]; then
+              echo "PASS: VRF flag injected via env inheritance"
+            else
+              echo "FAIL: VRF flag missing despite enterprise-vrf=true"; exit 1
+            fi
+          else
+            if [[ "${{ steps.cfg.outputs.config }}" == *"enterprise.vrf.enabled=true"* ]]; then
+              echo "FAIL: VRF flag leaked when enterprise-vrf=false"; exit 1
+            else
+              echo "PASS: no VRF flag when disabled"
+            fi
+          fi

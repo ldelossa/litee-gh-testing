@@ -1,0 +1,21 @@
+name: cilium-config
+description: Repro of env-into-composite inheritance
+outputs:
+  config:
+    description: 'Derived config'
+    value: ${{ steps.derive.outputs.config }}
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      id: derive
+      run: |
+        CONFIG="--base=1"
+
+        # The pattern we actually use: read the process env var in shell.
+        . ./.github/actions/cilium-config/enterprise-overrides.sh
+
+        echo "PROCESS-ENV  \$ENTERPRISE_VRF = '${ENTERPRISE_VRF:-<unset>}'"
+        echo "EXPR-CONTEXT  env.ENTERPRISE_VRF = '${{ env.ENTERPRISE_VRF }}'"
+        echo "RESULT CONFIG = ${CONFIG}"
+        echo "config=${CONFIG}" >> "$GITHUB_OUTPUT"
